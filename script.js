@@ -1,6 +1,6 @@
-// Roadmap boxes pop upward into view as the user scrolls to them.
+// Roadmap and service boxes pop upward into view as the user scrolls to them.
 document.addEventListener('DOMContentLoaded', () => {
-  const boxes = document.querySelectorAll('.roadmap-box');
+  const boxes = document.querySelectorAll('.roadmap-box, .service-box');
 
   if (!('IntersectionObserver' in window) || boxes.length === 0) {
     // Fallback: just show the boxes if IntersectionObserver isn't supported.
@@ -22,3 +22,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
   boxes.forEach(box => observer.observe(box));
 });
+
